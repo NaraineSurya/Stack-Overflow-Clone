@@ -8,7 +8,7 @@ import './Navbar.css'
 
 
 const Navbar = () => {
-  var User = 123456;
+  var User = null;
   return (
    <nav >
     <div className="navbar">

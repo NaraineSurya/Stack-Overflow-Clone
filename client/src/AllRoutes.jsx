@@ -1,14 +1,14 @@
 import React from 'react'
-import {Switch , Route} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Home from './pages/Home/Home'
 import Auth from './pages/Auth/Auth'
 
-const Routes = () => {
+const AllRoutes = () => {
   return (
-    <Switch>
+    <Routes>
         <Route exact path='/' Component='Home'></Route>
-    </Switch>
+    </Routes>
   )
 }
 
-export default Routes
+export default AllRoutes
