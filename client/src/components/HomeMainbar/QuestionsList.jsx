@@ -1,7 +1,7 @@
 import React from 'react'
 import Questions from './Questions'
 
-const QuestionsLisst = (questionsList) => {
+const QuestionsList = ({questionsList}) => {
   return (
     <>
     {
@@ -12,4 +12,4 @@ const QuestionsLisst = (questionsList) => {
   )
 }
 
-export default QuestionsLisst
+export default QuestionsList

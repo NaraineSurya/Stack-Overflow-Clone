@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link,useLocation } from 'react-router-dom'
+
 import './HomeMainbar.css'
-import Questions from './Questions'
 import QuestionsList from './QuestionsList'
+import Questions from './Questions'
 
 const HomeMainbar = () => {
 
@@ -51,7 +52,7 @@ const HomeMainbar = () => {
           <h1>Loading...</h1> :
           <>
           <p> { questionsList.length} questions </p>
-              <QuestionsList questionsList={questionsList} key={question.id}/>
+              <QuestionsList questionsList={questionsList} />
         
          </>
         }
