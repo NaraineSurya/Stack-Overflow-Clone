@@ -1,5 +1,6 @@
 .Left-sidebar {
-    margin: 55px 0px;
+    margin-top: 55px;
+    margin-left: 0px;
     width: 164px;
     box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
     transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
