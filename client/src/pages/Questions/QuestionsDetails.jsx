@@ -5,6 +5,7 @@ import upVote from '../../assets/sort-up.svg'
 import downVote from '../../assets/sort-down.svg'
 import './QuestionsDetails.css'
 import Avatar from '../../components/Avatar/Avatar'
+import DisplayAnswer from './DisplayAnswer'
 
 const QuestionsDetails = () => {
 
@@ -19,7 +20,14 @@ const QuestionsDetails = () => {
         questionBody: "It mean to be",
         QuestionTags: ["java", "node js" , "react js", "mongodb"],
         userPosted: "mano",
-        askedOn: "jan 1"
+        askedOn: "jan 1",
+        answeredOn: "jan3",
+        answer: [{
+            answerBody: "Answer",
+            userAnswered: "kumar",
+            answeredON: "jan2",
+            userId: 2,
+        }]
       },{
         id: '2',
         upVotes: 3,
@@ -29,7 +37,14 @@ const QuestionsDetails = () => {
         questionBody: "It mean to be",
         QuestionTags: ["javascript", "R" , "python"],
         userPosted: "mano",
-        askedOn: "jan 1"
+        askedOn: "jan 1",
+        answeredOn: "jan3",
+        answer: [{
+            answerBody: "Answer",
+            userAnswered: "kumar",
+            answeredON: "jan2",
+            userId: 2,
+        }]
       }, {
         id: '3',
         upVotes: 3,
@@ -39,7 +54,14 @@ const QuestionsDetails = () => {
         questionBody: "It mean to be",
         QuestionTags: ["javascript", "R" , "python"],
         userPosted: "mano",
-        askedOn: "jan 1"
+        askedOn: "jan 1",
+        answeredOn: "jan3",
+        answer: [{
+            answerBody: "Answer",
+            userAnswered: "kumar",
+            answeredON: "jan2",
+            userId: 2,
+        }]
       }]
 
   return (
@@ -87,12 +109,29 @@ const QuestionsDetails = () => {
                         </div>
                      </section>
                      {
-                        question.noOfAnswers != 0 &&(
+                        question.noOfAnswers !== 0 &&(
                             <section>
                                 <h3>{question.noOfAnswers} answers</h3>
+                                <DisplayAnswer key={question.id} question={question}/>
                             </section>
                         )
                      }
+                     <section className='post-ans-container'>
+                        <h3>Your Answers</h3>
+                        <form action="">
+                            <textarea name="" id="" cols="30" rows="10"></textarea> <br />
+                            <input type="submit" className='post-ans-btn' value='Post Your Answer'/>
+                        </form>
+                        <p>
+                            Browse other function tagged
+                            {
+                                question.QuestionTags.map((tag) => (
+                                     <Link to='/Tags' key={tag} className='ans-tags'> {tag} </Link>   
+                                )) 
+                            } or 
+                            <Link to='/AskQuestion' style={{textDecoration:"none", color:"#009dff"}}>ask your own question</Link>
+                        </p>
+                     </section>
                   </div>  
                 ))
             }

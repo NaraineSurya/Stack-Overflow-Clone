@@ -14,6 +14,8 @@ const AllRoutes = () => {
         <Route path ='/Questions' element={<Questions />} />
         <Route path ='/AskQuestion' element={<AskQuestion />} />
         <Route path ='/Questions/:id' element={<DisplayQuestion />} />
+
+        
     </Routes>
   )
 }
