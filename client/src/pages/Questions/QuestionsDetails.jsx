@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 
 import upVote from '../../assets/sort-up.svg'
 import downVote from '../../assets/sort-down.svg'
-import './QuestionsDetails.css'
 import Avatar from '../../components/Avatar/Avatar'
 import DisplayAnswer from './DisplayAnswer'
 
@@ -73,24 +72,24 @@ const QuestionsDetails = () => {
             {
                 questionsList.filter(question => question.id === id).map(question => (
                   <div key={question.id}>
-                     <section className='question-details-conatiner'>
+                     <section className='question-details-container'>
                         <h1>{question.questionTitle}</h1>
                         <div className='question-details-container-2'>
                             <div className="question-votes">
-                                <img src={upVote} alt="" width='18' />
+                                <img src={upVote} alt="" width='18' className='votes-icon' />
                                 <p>{question.upVotes - question.downVotes}</p>
-                                <img src={downVote} alt="" width='18' />
+                                <img src={downVote} alt="" width='18' className='votes-icon' />
                             </div>
                             <div style= {{width: "100%"}}>
-                                <p className='question-body'>{question.questionbody}</p>
-                                <div className="question-details-tags">
+                                <p className='question-body'>{question.questionBody}</p>
+                                <div className='question-details-tags'>
                                     {
                                         question.QuestionTags.map((tag) =>(
                                             <p key={tag}>{tag}</p>
                                         ))
                                     }
                                 </div>
-                                <div className="question-action-user">
+                                <div className="question-actions-user">
                                     <div>
                                         <button type='button'>Share</button>
                                         <button type='button'>Delete</button>
