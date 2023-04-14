@@ -1,4 +1,6 @@
 .Left-sidebar {
+    position: fixed;
+    height: 100vh;
     margin-top: 55px;
     margin-left: 0px;
     width: 164px;
