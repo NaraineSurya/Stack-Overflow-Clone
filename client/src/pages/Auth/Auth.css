@@ -45,7 +45,7 @@
 
 .auth-container-2 form label input{
     padding: 5px;
-    width: calc(100%-30px );
+    width: 80%;
     border: solid 1px #0000003e;
     font-size: 13px;
 }
