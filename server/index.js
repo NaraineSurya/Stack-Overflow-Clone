@@ -4,6 +4,7 @@ import cors from 'cors'
 
 import userRoutes from './routes/users.js'
 import dotenv from "dotenv"
+import Questionroutes from './routes/Questions.js'
 
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ app.get('/',(req,res) => {
     res.send("This is a Stack Overflow clone API")
 })
 app.use('/user', userRoutes)
+app.use('/questions', Questionroutes)
  
 const PORT = process.env.PORT || 5000
 
